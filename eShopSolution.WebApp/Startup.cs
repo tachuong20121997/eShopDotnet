@@ -32,6 +32,7 @@ namespace eShopSolution.WebApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
             else
             {
