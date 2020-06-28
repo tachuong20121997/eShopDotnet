@@ -1,4 +1,5 @@
-﻿using eShopSolution.Data.Entities.Shop;
+﻿using eShopSolution.Data.Configurations;
+using eShopSolution.Data.Entities.Shop;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,15 @@ namespace eShopSolution.Data.EF
     {
         public EShopDbContext(DbContextOptions options) : base(options)
         {
-
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            base.OnModelCreating(modelBuilder);
+        }
+
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Caterogy> Caterogies { get; set; }
