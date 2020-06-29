@@ -12,6 +12,6 @@ namespace eShopSolution.Data.Entities.Shop
 
         public int CategoryId { get; set; }
 
-        public Caterogy Category { get; set; }
+        public Category Category { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace eShopSolution.Data.Entities.Shop
         public string LanguageId { set; get; }
         public string SeoAlias { set; get; }
 
-        public Caterogy Category { get; set; }
+        public Category Category { get; set; }
 
         public Language Language { get; set; }
       
