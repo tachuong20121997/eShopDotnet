@@ -1,4 +1,5 @@
-﻿using eShopSolution.Data.Enums;
+﻿using eShopSolution.Data.Entities.System;
+using eShopSolution.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,5 +18,7 @@ namespace eShopSolution.Data.Entities.Shop
         public Product Product { get; set; }
 
         public DateTime DateCreated { get; set; }
+        public AppUser AppUser { get; set; }
+
     }
 }
