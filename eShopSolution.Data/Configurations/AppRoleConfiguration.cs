@@ -13,7 +13,6 @@ namespace eShopSolution.Data.Configurations
         {
             builder.ToTable("AppRoles");
             builder.Property(x => x.Description).HasMaxLength(200).IsRequired();
-
         }
     }
 }
