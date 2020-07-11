@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using eShopSolution.Application.Catalog.DTO;
-using eShopSolution.Application.Catalog.Products.DTO;
-using eShopSolution.Application.Catalog.Products.DTO.Public;
 using eShopSolution.Data.EF;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using eShopSolution.ViewModels.Catalog.Products;
 
 namespace eShopSolution.Application.Catalog.Products
 {
@@ -44,9 +41,7 @@ namespace eShopSolution.Application.Catalog.Products
                 ViewCount = x.p.ViewCount
             }).ToListAsync();
             return data;
-
         }
-
 
         public async Task<PageResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request)
         {
